@@ -1,0 +1,44 @@
+<div class="container">
+  <app-header></app-header>
+  <nav class="sidebar navbar fixed-top navbar-expand-sm navbar-light bg-white" [ngStyle]="{ 'width': sidebarWidth }">
+    <div class="logo-container" style="text-align: center;
+    mix-blend-mode: luminosity;">
+      <img src="../../../assets/bizpaylog (1).png" alt="Website Logo" class="logo">
+    </div>
+    <ul class="nav-menu">
+      <li>
+        <a routerLink="/"><i class="fa fa-home fs-4" [style.color]="iconColor"></i>&nbsp;&nbsp;
+          <span classs="menu-title text-truncate"*ngIf="iconName">Home</span></a>
+      </li>
+      <li>
+        <a routerLink="/about"><i class="fa fa-money-check" [style.color]="iconColor"></i>
+          &nbsp;&nbsp;
+          <span classs="menu-title text-truncate"*ngIf="iconName">Expenses</span></a>
+      </li>
+      <li>
+        <a routerLink="/services">
+          <i class="fa fa-chart-line" [style.color]="iconColor"></i>&nbsp;&nbsp;
+          <span classs="menu-title text-truncate" *ngIf="iconName">Reports</span></a>
+      </li>
+      <li>
+        <a routerLink="/contact"><i class="fa fa-credit-card fs-4" [style.color]="iconColor"></i>&nbsp;&nbsp;
+          <span classs="menu-title text-truncate" *ngIf="iconName">Wallet</span></a>
+      </li>
+      <!-- <li>
+        <a routerLink="/MoneyRequest"  *ngIf="iconName">
+        <i class="fa fa-money-request" [style.color]="iconColor"></i>&nbsp;&nbsp;Money Request
+      </a>
+      </li> -->
+      <li>
+        <a routerLink="/setting"  >
+          <i class="fa fa-cogs fs-4" [style.color]="iconColor"></i>&nbsp;&nbsp;
+          <span classs="menu-title text-truncate" *ngIf="iconName">Setting</span></a>
+      </li>
+    </ul>
+    <div class="vertical-line"></div>
+    <div class="toggle-btn w-15" (click)="toggleSidebar()" style="cursor:pointer; text-align: center;">
+      <span clas="menu-title text-truncate" *ngIf="iconName">ToggleSidebar</span>
+      <i class="fa fa-toggle-on fs-5" [style.color]="iconColor" [ngStyle]="{ 'width': iconWidth}"></i>
+    </div>
+  </nav>
+</div>
